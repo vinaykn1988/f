@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+
+	<package name="day2" extends="struts-default">
+	
+	 <action name="priceForm">
+		<result>/WEB-INF/pages/priceForm.jsp</result>
+	</action>
+	
+	<action name="getProductsByPrice"
+		class="com.brillio.training.web.actions.ProductAction"
+		method="getProductsByPrice">
+		<result name="success">/WEB-INF/pages/showProducts.jsp</result>
+	</action>
+	
+	<action name="getAllProducts"
+		class="com.brillio.training.web.actions.ProductAction"
+		method="getAllProducts">
+		<result name="success">/WEB-INF/pages/showProducts.jsp</result>
+	</action>
+	
+	</package>
+	
+	<!-- this is file containing mapping of URL to actions
+	and actions to results -->
+	
+	<package name="p1" extends="struts-default">
+	
+	 <!-- correspond to <form action='hello'> in index.jsp -->
+	 <!-- whenever a request "/hello" comes from the client,
+	 an object of HelloAction is created, the request params
+	 are assigned to the properties via setter (if possible)
+	 and then executes the method "sayHello" which is a 
+	 public String returning no-arg function -->
+	<action name="hello" 
+		class="com.brillio.training.web.actions.HelloAction"
+		method = "sayHello">
+		
+	<!-- define the view for each return values -->
+	<result name="success">/hello.jsp</result>
+	<result name="failure">/index.jsp</result>	
+	
+	</action>
+	
+	</package>
+	
+</struts>

@@ -1,0 +1,5 @@
+package com.brillio.showtime.enity;
+
+public class VideoInfo {
+
+}

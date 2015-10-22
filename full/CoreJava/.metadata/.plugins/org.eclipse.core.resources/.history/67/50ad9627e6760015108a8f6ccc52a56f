@@ -1,0 +1,34 @@
+package com.brillio.training.web.actions;
+
+import com.brillio.training.dao.DaoException;
+import com.brillio.training.dao.DaoFactory;
+import com.brillio.training.dao.ProductDao;
+
+public class ProductAction {
+
+	private double minPrice, maxPrice;
+	
+	public double getMinPrice() {
+		return minPrice;
+	}
+
+	public void setMinPrice(double minPrice) {
+		this.minPrice = minPrice;
+	}
+
+	public double getMaxPrice() {
+		return maxPrice;
+	}
+
+	public void setMaxPrice(double maxPrice) {
+		this.maxPrice = maxPrice;
+	}
+	
+public String getProductsPrice() throws DaoException{
+		
+	ProductDao dao = DaoFactory.getProductDao();
+	Product products = dao.getProductsByPriceRange(minPrice, maxPrice);
+		return "success";
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.brillio.training.entity;
+
+public class Category {
+
+	Integer categoryId;
+	private String categoryName;
+	private String description;
+	private byte[]	picture;
+	
+}

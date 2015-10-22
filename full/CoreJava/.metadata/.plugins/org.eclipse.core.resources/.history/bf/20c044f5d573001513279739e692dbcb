@@ -1,0 +1,40 @@
+package com.brillio.training.web;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.brillio.training.entity.Person;
+
+@WebServlet("/GetPersonsServlet")
+public class GetPersonsServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		List<Person> list = new ArrayList<>();
+		
+		list.add(new Person(1, "John", "Doe", 5.9));
+		list.add(new Person(1, "Jane", "Doe", 5.5));
+		list.add(new Person(1, "Will", "Smith", 5.11));
+		list.add(new Person(1, "Ram", "Kumar", 6.2));
+		list.add(new Person(1, "Shyam", "Sundar", 6.1));
+		
+		
+		// store the data in the request scope
+		request.setAttribute("persons", list);
+		
+		// forward to the view
+		request.getRequestDispatcher("display.jsp")
+		.forward(request, response);
+		
+	}
+
+}

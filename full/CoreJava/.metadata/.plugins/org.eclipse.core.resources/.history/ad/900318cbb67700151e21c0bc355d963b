@@ -1,0 +1,12 @@
+package com.brillio.training.entity;
+
+public class Shipper {
+
+	private int shipperId;
+	private String companyName;
+	private String phone;
+
+	// used by JPA implementation for creating objects
+	public Shipper() {
+	}
+}

@@ -1,0 +1,60 @@
+package com.brillio.training.entity;
+
+import java.beans.Transient;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="shippers")
+public class Shipper {
+
+	@Column(name="shipper_id")
+	private int shipperId;
+	@Column(name="company_name")
+	private String companyName;
+	private String phone;     // automatically mapped to "phone" column
+	
+	@Transient
+	private String email;    // not mapped because of @Transient
+
+	// used by JPA implementation for creating objects
+	public Shipper() {
+	}
+
+	public int getShipperId() {
+		return shipperId;
+	}
+	
+	public Shipper(int shipperId, String companyName, String phone) {
+		this.shipperId = shipperId;
+		this.companyName = companyName;
+		this.phone = phone;
+	}
+
+	public void setShipperId(int shipperId) {
+		this.shipperId = shipperId;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Shipper [shipperId=%s, companyName=%s, phone=%s]", shipperId, companyName, phone);
+	}
+}

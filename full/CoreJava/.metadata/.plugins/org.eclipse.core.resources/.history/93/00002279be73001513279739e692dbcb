@@ -1,0 +1,12 @@
+<% 
+	try {
+		int num = Integer.parseInt(request.getParameter("num"));
+	}
+
+	catch(NumberFormatException){
+		%>
+		
+		<%
+	}
+
+%>

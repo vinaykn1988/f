@@ -1,0 +1,10 @@
+package com.brillio.training.web.actions;
+
+public class ProductAction {
+
+	
+	Public String getProductsPrice(){
+		
+		return "success";
+	}
+}

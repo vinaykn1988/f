@@ -1,0 +1,9 @@
+package com.brillio.training.entity;
+
+public class Person {
+	
+	private int id;
+	private String firstName;
+	private String lastName;
+	private double height;
+}

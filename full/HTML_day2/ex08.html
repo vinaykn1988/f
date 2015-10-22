@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript" src="jquery/jquery-1.11.3.js"></script>
+
+<style type="text/css">
+	.spacer {
+
+		height: 50px;
+
+	}
+</style>
+
+<script type="text/javascript">
+
+$(function(){
+
+// click event handler for button
+
+$("#btnShowHide")
+.click(function(){
+
+	var caption = $(this).text();
+	if(caption=="show"){
+		$(this).text("Hide");
+		$("#photo").fadeIn(1000);
+	}
+
+	else{
+
+		$(this).text("show");
+				$("#photo").fadeOut(1000);
+
+	}
+
+
+	//	$("#photo").fadeOut(1000);
+});
+
+	});
+
+</script>
+
+</head>
+<body>
+
+<div class="spacer"></div>
+<button id="btnShowHide">Hide</button>
+<div class="spacer"></div>
+
+<div id="photo">
+	<img src = "../HTML_Day1/images/mi5.jpg">
+</div>
+
+</body>
+
+</html>

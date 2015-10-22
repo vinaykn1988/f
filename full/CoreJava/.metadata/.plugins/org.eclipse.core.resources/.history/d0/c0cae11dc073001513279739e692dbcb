@@ -1,0 +1,14 @@
+<% 
+	try {
+		int num = Integer.parseInt(request.getParameter("num"));
+	}
+
+	catch(NumberFormatException e){
+		%>
+		
+		<jsp:forward page="error.jsp" />
+		
+		<%
+	}
+
+%>

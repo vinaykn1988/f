@@ -1,0 +1,48 @@
+package com.brillio.training.web;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+
+import com.brillio.training.entity.Product;
+
+@WebFilter(servletNames = { "AddProductServlet" })
+public class CreateProductFilter implements Filter {
+
+   
+    public CreateProductFilter() {
+    }
+
+	
+	public void destroy() {
+	}
+
+	
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		
+		Product p = new Product();
+		// set the values of p from request parameters
+		
+		
+		try{
+			p.setProductId(Integer.parseInt(request.getParameter("productId")));
+		}
+		catch(Exception e){
+			
+			request.setAttribute("err.productId", "Invalid product id");
+		}
+		request.setAttribute("product", p);
+		chain.doFilter(request, response);
+	}
+
+	
+	public void init(FilterConfig fConfig) throws ServletException {
+	}
+
+}

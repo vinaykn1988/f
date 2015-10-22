@@ -1,0 +1,11 @@
+package com.brillio.training.web.actions;
+
+public class ProductAction {
+
+	private double minPrice, maxPrice;
+	
+	public String getProductsPrice(){
+		
+		return "success";
+	}
+}

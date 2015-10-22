@@ -1,0 +1,5 @@
+<% 
+
+int num = Integer.parseInt(request.getParameter("num"));
+
+%>

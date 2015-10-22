@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private void common(List&lt;Product&gt; products, ResultSet rs) throws SQLException &apos; from &apos;com.brillio.training.dao.impl.JdbcProductDao.getProductsByCategory()&apos; to &apos;com.brillio.training.dao.impl.JdbcProductDao&apos;&#x0D;&#x0A;- Original project: &apos;Exercise 5&apos;&#x0D;&#x0A;- Method name: &apos;common&apos;&#x0D;&#x0A;- Destination type: &apos;com.brillio.training.dao.impl.JdbcProductDao&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;&#x0D;&#x0A;- Replace occurrences of statements with method" comments="false" description="Extract method &apos;common&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;com.brillio.training.dao.impl{JdbcProductDao.java" name="common" replace="true" selection="6989 659" stamp="1444386993259" version="1.0" visibility="2"/>
+</session>

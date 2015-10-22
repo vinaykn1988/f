@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+	<title>New user registration</title>
+
+		<style type="text/css">
+		/*ancestor descendent*/
+		div#main label {
+			display: inline-block;
+			width: 200px;
+		}
+
+		/*parent child*/
+		div#main>form>div {
+			margin: 10px;
+		}
+
+		input[type="text"] {
+			height: 25px;
+			border-radius: 5px;
+			border-color: transparent;
+			border: 1px solid #777;
+			padding-left: 5px;
+		}
+
+		button:hover {
+			box-shadow: 0 0 10px red;
+			color: pink;
+		}
+		button {
+			height: 50px;
+			background-color: #555;
+			color: white;
+			cursor: pointer;
+			font-size: 1.2em;
+			width: 150px;
+			border-radius: 10px;
+		}
+	</style>
+
+
+<script type="text/javascript">
+
+function checkEmail() {
+
+    var email = document.getElementById('email');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+ }
+</script>
+
+</head>
+<body background="images/bg1.jpg">
+
+<div id="header">
+
+	<h1 style="text-align:center; background-color:grey">ACME video Rental Services</h1>
+
+</div>
+
+<div id="main">
+
+	<h3>New users register here</h3>
+
+	<form>
+
+		<div>
+			<label>Firstname:</label>
+		<input type="text" id = "first_name" name = "firstName" />
+
+		</div>
+
+		<div>
+			<label>Lastname:</label>
+		<input type="text" id = "last_name" name = "lastName" />
+		</div>
+
+		<div>
+			<label>Email address:</label>
+		<input type="text" id = "email" name = "email" />
+
+		</div>
+
+		<div>
+			<label>Gender:</label>
+		<input type="radio"  name = "gender" value = "M" checked /> Male
+		<input type="radio"  name = "gender" value = "M" /> Female
+		</div>
+		
+		<div>
+			<label>Genre</label>
+		<input type="checkbox"  name = "genre" value ="action" /> Action
+		 <input type="checkbox"  name = "genre" value ="adventure" /> Adventure
+		 <input type="checkbox"  name = "genre" value ="scifi" /> science fiction
+		 <input type="checkbox"  name = "genre" value ="crime" /> crime
+		 <input type="checkbox"  name = "genre" value ="drama" /> drama
+		 <input type="checkbox"  name = "genre" value ="romance" /> romance
+		 <input type="checkbox"  name = "genre" value ="animation" /> animation
+		 <input type="checkbox"  name = "genre" value ="comedy" /> comedy
+		
+		</div>
+
+
+		<div>
+
+			<label>How ofter would you like to receive email notification</label>
+
+			<select id="notificationFrequency" name="notificationFrequency" size="1">
+
+				<option value = "1">	</option>
+				<option value = "1">Everyday</option>
+				<option value = "2">once a week</option>
+				<option value = "3">twice a week</option>
+				<option value = "4">once in a month</option>
+				<option value = "5">Don't notify me</option>
+			</select>
+		</div>
+
+		<div>
+
+			<label></label>
+			<button onclick="checkEmail()">Register</button>
+		</div>
+
+
+
+	</form>
+
+</div>
+
+<div id="footer">
+
+<p>&copy; 2015 - all rights reserved</p>
+
+</div>
+
+</body>
+</html>

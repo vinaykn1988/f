@@ -1,0 +1,23 @@
+package com.brillio.training.Programs;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import org.apache.commons.collections.iterators.EmptyMapIterator;
+
+import com.brillio.training.entity.Category;
+import com.brillio.training.entity.Shipper;
+
+public class Program04 {
+
+	public static void main(String[] args) {
+	
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("nwind-pu");
+		EntityManagerFactory em = emf.createEntityManager();
+		
+		Category cat = em.find(Category.class,5);
+	}
+	
+}

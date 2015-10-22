@@ -1,0 +1,136 @@
+package com.brillio.training.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "products")
+public class Product implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name = "product_id")
+	private int productId;
+	@Column(name = "product_name")
+	private String productName;
+
+
+	@Column(name = "quantity_per_unit")
+	private String quantityPerUnit;
+	
+	@ManyToOne
+	@JoinColumn(name = "supplier_id")
+	private Supplier supplier;
+	
+	// MANY products belong to ONE category
+	@ManyToOne
+	@JoinColumn (name="category_id")
+	private Category category;
+	// JPA implementation (hibernate) will automatically query
+	// the table corresponding to the "Category" class, joining
+	// the primary key of that table to the "category_id" of the 
+	// table corresponding to this class (Product)
+	
+	@Column(name = "unit_price")
+	private double unitPrice;
+	@Column(name = "units_in_stock")
+	private int unitsInStock;
+	@Column(name = "units_on_order")
+	private int unitsOnOrder;
+	@Column(name = "reorder_level")
+	private int reorderLevel;
+	@Column(name = "discontinued")
+	private int discontinued;
+
+	public Product() {
+	}
+
+	public int getProductId() {
+		return productId;
+	}
+
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public String getQuantityPerUnit() {
+		return quantityPerUnit;
+	}
+
+	public void setQuantityPerUnit(String quantityPerUnit) {
+		this.quantityPerUnit = quantityPerUnit;
+	}
+
+	public double getUnitPrice() {
+		return unitPrice;
+	}
+
+	public void setUnitPrice(double unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+
+	public int getUnitsInStock() {
+		return unitsInStock;
+	}
+
+	public void setUnitsInStock(int unitsInStock) {
+		this.unitsInStock = unitsInStock;
+	}
+
+	public int getUnitsOnOrder() {
+		return unitsOnOrder;
+	}
+
+	public void setUnitsOnOrder(int unitsOnOrder) {
+		this.unitsOnOrder = unitsOnOrder;
+	}
+
+	public int getReorderLevel() {
+		return reorderLevel;
+	}
+
+	public void setReorderLevel(int reorderLevel) {
+		this.reorderLevel = reorderLevel;
+	}
+
+	public int getDiscontinued() {
+		return discontinued;
+	}
+
+	public void setDiscontinued(int discontinued) {
+		this.discontinued = discontinued;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	
+	public Supplier getSupplier() {
+		return supplier;
+	}
+	public void setSupplier(Supplier supplier) {
+		this.supplier = supplier;
+	}
+	
+
+
+}

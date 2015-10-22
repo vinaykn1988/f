@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+	<!-- this is file containing mapping of URL to actions
+	and actions to results -->
+	
+	<package name="p1" extends="struts-default">
+	
+	 <!-- correspond to <form action="hello"> in index.jsp -->
+	<action name="hello" 
+		class="com.brillio.training.web.actions.HelloAction">
+	
+	</action>
+	
+	</package>
+	
+</struts>

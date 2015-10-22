@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>JS Demo</title>
+	<script type="text/javascript">
+	
+	function addName()
+	{
+		//get the value entered in the textbox
+		var t1 = document.getElementById("a_name");
+		var name = t1.value.trim();
+		// check if it is empty
+		// if empty, display an error && return
+
+		if(!name){
+			document.querSelector("#errName")
+			.innerHTML = "No name entered";
+			t1.focus();					
+			return;
+		}
+
+		// if not empty
+		var list1 = document.querySelector("div#d1 ul");
+		
+		// 	add the textbox value to <ul> as <li>
+		list1.innerHTML +="<li>"+name+"</li>";
+
+		//empty the textbox
+		t1.value = "";
+
+		// bring the foucs to the textbox
+		t1.focus();
+	}
+
+	</script>
+</head>
+<body>
+
+<h1>JS Demo</h1>
+<hr/>
+<h2>Dom Manipulation Example</h2>
+
+<div>
+
+	<label>Enter a name:</label>
+	<input type="text" id= "a_name" name = "a_name">
+	<button type = "button" onclick = "addName()"> Add </button>
+	<span id = "errName"> </span>
+</div>
+
+	<div id="d1">
+		<ul>
+			<li>Vinod </li>
+			<li>John </li>
+			<li>Jane </li>
+		</ul>
+	</div>
+
+</body>
+</html>

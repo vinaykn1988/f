@@ -1,0 +1,7 @@
+
+
+<div class="footer">
+&copy; 2015 all rights reserved
+</div>
+</body>
+</html>

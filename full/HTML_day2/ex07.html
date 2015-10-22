@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript" src="jquery/jquery-1.11.3.js"></script>
+
+<script type="text/javascript">
+
+// dom-ready evernt handler
+$(function(){
+
+$("#popular_movies").before("<h2> popular_movies </h2>").after("<p> More...."). append("<li> Entourage </li>").prepend("<li> This is us </li>");
+
+$("h1:first").css("color", "red");
+$("#popular_movies li:eq(2)").css("color", "blue");
+});
+</script>
+
+</head>
+<body>
+<h1>ACME Video Rental Services</h1>
+
+<ul id="popular_movies">
+<li>Mission Impossible 5</li>
+<li>Titanic</li>
+<li>Six bullets </li>
+
+</ul>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Product Information</title>
+
+<script type="text/javascript" src="jquery/jquery-1.11.3.js"> </script>
+
+<script type="text/javascript" src="jquery/jquery.tablesorter.js"> </script>
+
+<script type="text/javascript">
+
+$(function(){
+	$("table").tablesorter(); 
+});
+</script>
+
+</head>
+<body>
+
+<h1>Northwind Inc.</h1>
+<h2>Product Information</h2>
+
+<div class="links">
+<a href="./">Home</a>
+<a href="./viewAllProducts">All products</a>
+<a href="./productsByPriceRange.jsp"> Products by price </a>
+</div>
+<hr />

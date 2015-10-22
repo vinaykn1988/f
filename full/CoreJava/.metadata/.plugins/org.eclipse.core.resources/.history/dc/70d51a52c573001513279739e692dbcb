@@ -1,0 +1,10 @@
+package com.brillio.training.web.tags;
+
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class TodayTag extends TagSupport {
+
+	private static final long serialVersionUID = 1L;
+
+	
+}

@@ -1,0 +1,23 @@
+package com.brillio.training.Programs;
+
+import java.io.FileInputStream;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class Program05 {
+
+	public static void main(String[] args) throws Exception{
+		
+		FileInputStream in = new FileInputStream("beverages.jpg");
+		byte[] bytes = new byte[in.available()];
+		in.read(bytes);
+		in.close();
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("nwind-pu");
+		EntityManager em = emf.createEntityManager();
+		
+		
+	}
+	
+}

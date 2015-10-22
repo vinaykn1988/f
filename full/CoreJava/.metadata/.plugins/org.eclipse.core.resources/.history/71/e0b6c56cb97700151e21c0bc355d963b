@@ -1,0 +1,15 @@
+package com.brillio.training.Programs;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+public class Program01 {
+
+	public static void main(String[] args) {
+		
+		EntityManagerFactory emf;
+		EntityManager em;
+		
+	}
+	
+}

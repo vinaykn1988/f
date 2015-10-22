@@ -1,0 +1,4 @@
+<div id="footer">
+<p>&copy; 2015 -all rights reserved </p>
+</body>
+</html>

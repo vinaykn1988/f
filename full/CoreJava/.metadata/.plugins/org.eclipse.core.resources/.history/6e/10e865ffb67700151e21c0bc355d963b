@@ -1,0 +1,52 @@
+package com.brillio.training.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="shippers")
+public class Shipper {
+
+	private int shipperId;
+	private String companyName;
+	private String phone;
+
+	// used by JPA implementation for creating objects
+	public Shipper() {
+	}
+
+	public int getShipperId() {
+		return shipperId;
+	}
+	
+	public Shipper(int shipperId, String companyName, String phone) {
+		this.shipperId = shipperId;
+		this.companyName = companyName;
+		this.phone = phone;
+	}
+
+	public void setShipperId(int shipperId) {
+		this.shipperId = shipperId;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Shipper [shipperId=%s, companyName=%s, phone=%s]", shipperId, companyName, phone);
+	}
+}

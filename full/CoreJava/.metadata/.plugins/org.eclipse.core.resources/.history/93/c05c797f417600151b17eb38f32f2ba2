@@ -1,0 +1,5 @@
+package com.brillio.training.web.actions;
+
+public class HelloAction {
+
+}

@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Working with links</title>
+	</head>
+
+	<style type="text/css">
+		a.button{
+			color:black;
+			background-color: #ccc;
+			padding: 10px;
+			border-radius: 10px;
+			border-color: #777;
+			border-width: 10px;
+			border-style: solid;
+			font-weight: bold;
+			font-family: helvetica;
+			text-shadow: 1px 1px 2px white;
+			margin: 5px 10px;
+			height: 20px;
+			width: 40px;
+			display: inline-block;
+			text-align: center;
+			text-decoration: none;
+
+		}
+
+		#the_image{ 
+			position: absolute;
+			left: 200px;
+			top: 75px;
+			width: 600px;
+			height: 400px;
+			border-radius: 10px;
+		}
+
+	</style>
+	<script type="text/javascript" src="jquery/jquery-1.11.3.js"></script>
+	
+	<script type="text/javascript">
+		$(function(){
+			$("a.button").click(function(){
+				var img=$(this).attr("data-img-name");
+				$("#the_image").attr("src",img);	
+			});
+		});
+	</script>
+<body>
+	
+	<h1></h1>
+	<a href="#" class="button" data-img-name="images/1.jpg">Van</a> <br />
+	<a href="#" class="button" data-img-name="images/2.jpg">Camera</a> <br />
+	<a href="#" class="button" data-img-name="images/3.jpg">Car</a> <br />
+	<a href="javascript:void(0)" class="button" data-img-name="images/4.jpg">Coffee</a> <br />
+	<a href="javascript:void(0)" class="button" data-img-name="images/5.jpg">Bridge</a> <br />
+
+     <img id="the_image" src="images/1.jpg">
+</body>
+</html>

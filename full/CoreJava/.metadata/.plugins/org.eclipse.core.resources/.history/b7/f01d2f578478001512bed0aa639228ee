@@ -1,0 +1,7 @@
+package com.brillio.training.entity;
+
+public class Supplier {
+
+	private Integer supplierId;
+	private String 
+}

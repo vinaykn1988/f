@@ -1,0 +1,49 @@
+package com.brillio.training.Programs;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.brillio.training.entity.Shipper;
+
+public class Program02 {
+
+	public static void main(String[] args) {
+		
+		EntityManagerFactory emf;
+		EntityManager em;
+		
+		// reads the META-INF/persistence.xml file
+		emf=Persistence.createEntityManagerFactory("nwind-pu");
+		em = emf.createEntityManager();
+		
+		int id=8;
+		Shipper s1 = em.find(Shipper.class, id);
+		
+		if(s1!=null){
+			
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+		try{
+			em.remove(s1);
+			System.out.println("Shipper deleted from db!");
+			tx.commit();
+		}
+		catch(Exception e){
+			
+			tx.rollback();
+			System.out.println("Data not removed, due to an exception");
+			System.out.println(e.getMessage());
+		}
+		
+		em.close();
+		}
+		
+		else{
+			System.out.println("No shipper with id" + id);
+		}
+	}
+	
+}

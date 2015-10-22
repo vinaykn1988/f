@@ -1,0 +1,15 @@
+package com.brillio.training.Programs;
+
+import java.io.FileInputStream;
+
+public class Program05 {
+
+	public static void main(String[] args) throws Exception{
+		
+		FileInputStream in = new FileInputStream("beverages.jpg");
+		byte[] bytes = new byte[in.available()];
+		in.read(bytes);
+		in.close();
+	}
+	
+}

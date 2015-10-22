@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v7.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v7.0 Server at localhost" name="Tomcat v7.0 Server at localhost" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="12">
+    <list key="modules" value0="10 Basic Webapp::org.eclipse.jst.jee.server:10 Basic Webapp::jst.web::3.0" value1="Excercise-5-web::org.eclipse.jst.jee.server:Excercise-5-web::jst.web::3.0" value2="11 JSP Basics::org.eclipse.jst.jee.server:11 JSP Basics::jst.web::3.0" value3="Excercise5Web2::org.eclipse.jst.jee.server:Excercise5Web2::jst.web::3.0" value4="12 JSP Actions::org.eclipse.jst.jee.server:12 JSP Actions::jst.web::3.0" value5="13 JSTL::org.eclipse.jst.jee.server:13 JSTL::jst.web::3.0" value6="Exercise5Web2::org.eclipse.jst.jee.server:Exercise5Web2::jst.web::3.0" value7="14 Cookies::org.eclipse.jst.jee.server:14 Cookies::jst.web::3.0" value8="15 Filters and Listners::org.eclipse.jst.jee.server:15 Filters and Listners::jst.web::3.0" value9="16 Struts2 Basics::org.eclipse.jst.jee.server:16 Struts2 Basics::jst.web::3.0"/>
+  </server>
+</servers>
